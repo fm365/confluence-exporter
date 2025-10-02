@@ -2,7 +2,7 @@
 
 # Confluence 全量导出工具
 
-这是一个 Python 脚本，用于自动化地将 Confluence 中所有可访问的空间（Space）备份导出为 Markdown 格式。它底层利用了 [confluence-markdown-exporter](https://github.com/confluence-publisher/confluence-markdown-exporter) 工具，并增加了以下功能：
+这是一个 Python 脚本，用于自动化地将 Confluence 中所有可访问的空间（Space）备份导出为 Markdown 格式。它底层利用了 [confluence-markdown-exporter](https://github.com/Spenhouet/confluence-markdown-exporterr) 工具，并增加了以下功能：
 
 ## 主要功能
 

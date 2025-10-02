@@ -2,7 +2,7 @@
 
 # Confluence Export Tool
 
-This is a Python script designed to automate the export of all accessible Confluence spaces to Markdown format. It leverages the [confluence-markdown-exporter](https://github.com/confluence-publisher/confluence-markdown-exporter) tool and adds the following features:
+This is a Python script designed to automate the export of all accessible Confluence spaces to Markdown format. It leverages the [confluence-markdown-exporter](https://github.com/Spenhouet/confluence-markdown-exporter) tool and adds the following features:
 
 ## Key Features
 
