@@ -11,7 +11,7 @@
 
 ## 环境准备
 
-- Python 3.8+
+- Python 3.11+
 - Git
 
 ## 安装与配置
@@ -19,7 +19,7 @@
 **1. 克隆仓库**
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/fm365/confluence-exporter.git
 cd confluence-exporter
 ```
 
