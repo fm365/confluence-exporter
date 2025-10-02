@@ -1,2 +1,3 @@
 atlassian-python-api
 python-dateutil
+confluence-markdown-exporter

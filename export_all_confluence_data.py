@@ -176,7 +176,7 @@ def main():
         
         try:
             print(f"Running command: {' '.join(command)}")
-            subprocess.run(command, check=True, env=export_env, text=True, encoding='utf-8', timeout=18000)
+            subprocess.run(command, check=True, env=export_env, text=True, encoding='utf-8', timeout=18000, capture_output=True)
             print(f"Successfully exported space '{space_key}' to '{dir_name}'.")
 
             # Write/update the metadata file with the server's last modified date
@@ -190,7 +190,13 @@ def main():
         except subprocess.TimeoutExpired:
             print(f"TIMEOUT ERROR: Exporting space '{space_key}' took too long (more than 30 minutes) and was skipped.")
         except subprocess.CalledProcessError as e:
-            print(f"ERROR: Failed to export space '{space_key}'. The command failed with exit code {e.returncode}.")
+            error_output = e.stderr if e.stderr else e.stdout
+            if error_output and "ValidationError: 1 validation error for Space homepage Input should be a valid integer" in error_output:
+                print(f"WARNING: Space '{space_key}' skipped due to a bug in 'confluence-markdown-exporter': homepage field expects integer but received None (likely because the space has no explicit homepage). Please consider reporting this bug to the 'confluence-markdown-exporter' project.")
+                continue # Skip to the next space
+            else:
+                print(f"ERROR: Failed to export space '{space_key}'. The command failed with exit code {e.returncode}.")
+                print(f"Full error details: {error_output}") # Print full error for other issues.
         except Exception as e:
             print(f"An unexpected error occurred while exporting '{space_key}': {e}")
 
