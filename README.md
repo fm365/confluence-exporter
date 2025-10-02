@@ -21,7 +21,7 @@ This is a Python script designed to automate the export of all accessible Conflu
 **1. Clone the repository**
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/fm365/confluence-exporter.git
 cd confluence-exporter
 ```
 
