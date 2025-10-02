@@ -1,0 +1,13 @@
+# Local configuration file with secrets
+config.json
+
+# Output directory for exported data
+/data_export/
+
+# Python virtual environment & cache
+confluence-exporter-venv/
+venv/
+*.venv
+__pycache__/
+*.pyc
+.DS_Store

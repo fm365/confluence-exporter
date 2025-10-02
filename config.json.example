@@ -1,0 +1,12 @@
+{
+  "confluence": {
+    "url": "https://your-domain.atlassian.net/wiki",
+    "user": "your-email@example.com",
+    "pat": "YOUR_CONFLUENCE_API_TOKEN_HERE"
+  },
+  "jira": {
+    "url": "https://your-domain.atlassian.net",
+    "user": "your-email@example.com",
+    "pat": "YOUR_JIRA_API_TOKEN_HERE"
+  }
+}
